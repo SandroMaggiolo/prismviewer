@@ -57,7 +57,6 @@ for (var i = 0; i < 10000; i++) {
 originalInfo.push({info3})
 
 // CREATE THE 3D CHART
-
 // Background creation
 createChart("canvas1", "rgb(25, 25, 25)", 5, 5, 5)
 // Walls creation
