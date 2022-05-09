@@ -1,12 +1,11 @@
 # Prism Viewer library
+========
 [![NPM Package][npm]][npm-url]
 
 #### JavaScript 3D library for charts ####
 Threejs based library for representing three-dimensional data in HTML pages with JavaScript. This project was started by Sandro Maggiolo Ruiz for the final thesis at the University of Alcalá on 2022.
 
 Librería basada en Threejs para representar información tridimensional en páginas HTML con JavaScript. Este proyecto fue iniciado por Sandro Maggiolo Ruiz para el trabajo de fin de grado en la Universidad de Alcalá en 2022.
-
-========
 
 ### Usage ###
 
