@@ -78,5 +78,7 @@ addAxisSliders("#6666FF",true)
 enableLegend(14,"rgb(255,255,255)")
 ```
 
+If you want to see the result of this example go to: https://tfg-ejemplo3-libreria-en-uso.vercel.app/
+
 [npm]: https://img.shields.io/npm/v/three
 [npm-url]: https://www.npmjs.com/
