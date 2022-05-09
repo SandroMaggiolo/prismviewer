@@ -9,7 +9,7 @@
 [FR] Bibliothèque basée sur Threejs pour représenter des données tridimensionnelles dans des pages HTML avec JavaScript. Ce projet a été lancé par Sandro Maggiolo Ruiz pour la thèse finale à l'Université d'Alcalá en 2022.
 
 [Releases](https://github.com/SandroMaggiolo/prismviewer/releases) &mdash;
-[Wiki](https://github.com/SandroMaggiolo/prismviewer/wiki) &mdash;
+[Wiki](https://github.com/SandroMaggiolo/prismviewer/wiki)
 
 ### Usage ###
 The following code is an example to create a 3D chart with random information. It creates the space, the axis, grid, frames, labels and then adds the random information and stablish the sliders and limits.
