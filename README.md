@@ -1,6 +1,4 @@
 # Prism Viewer library
-========
-
 [![NPM Package][npm]][npm-url]
 
 #### JavaScript 3D library for charts ####
@@ -9,7 +7,6 @@ Threejs based library for representing three-dimensional data in HTML pages with
 Librería basada en Threejs para representar información tridimensional en páginas HTML con JavaScript. Este proyecto fue iniciado por Sandro Maggiolo Ruiz para el trabajo de fin de grado en la Universidad de Alcalá en 2022.
 
 ### Usage ###
-
 This code creates a scene, a camera, and a geometric cube, and it adds the cube to the scene. It then creates a `WebGL` renderer for the scene and camera, and it adds that viewport to the `document.body` element. Finally, it animates the cube within the scene for the camera.
 
 ```javascript
