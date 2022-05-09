@@ -7,42 +7,60 @@ Threejs based library for representing three-dimensional data in HTML pages with
 Librería basada en Threejs para representar información tridimensional en páginas HTML con JavaScript. Este proyecto fue iniciado por Sandro Maggiolo Ruiz para el trabajo de fin de grado en la Universidad de Alcalá en 2022.
 
 ### Usage ###
-This code creates a scene, a camera, and a geometric cube, and it adds the cube to the scene. It then creates a `WebGL` renderer for the scene and camera, and it adds that viewport to the `document.body` element. Finally, it animates the cube within the scene for the camera.
+The following code is an example to create a 3D chart with random information. It creates the space, the axis, grid, frames, labels and then adds the random information and stablish the sliders and limits.
 
-```javascript
-import * as THREE from 'three';
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Diagram test</title>
+</head>
+<body>
+    <canvas class="canvas1" width="1000" height="600""></canvas>
 
-// init
+    <script src="./three.min.js"></script>
+    <script src="./dat.gui.min.js"></script>
+    <script src="./OrbitControls.js"></script>
+    <script src="./FontLoader.js"></script>
+    <script src="./TextGeometry.js"></script>
+    <script src="./prism.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
 
-const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-camera.position.z = 1;
-
-const scene = new THREE.Scene();
-
-const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-const material = new THREE.MeshNormalMaterial();
-
-const mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
-
-const renderer = new THREE.WebGLRenderer( { antialias: true } );
-renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setAnimationLoop( animation );
-document.body.appendChild( renderer.domElement );
-
-// animation
-
-function animation( time ) {
-
-	mesh.rotation.x = time / 2000;
-	mesh.rotation.y = time / 1000;
-
-	renderer.render( scene, camera );
-
-}
 ```
 
+```javascript
 
+// CREATE RANDOM INFO
+var originalInfo = []
+var info1 = []
+var info2 = []
+var info3 = []
+originalInfo.push({info1})
+originalInfo.push({info2})
+for (var i = 0; i < 10000; i++) {
+    info3.push({
+        varX: Math.random()*20,
+        varY: Math.random()*20,
+        varZ: Math.random()*20
+    });
+}
+originalInfo.push({info3})
+
+// CREATE THE 3D CHART
+createChart("canvas1", "rgb(25, 25, 25)", 5, 5, 5)
+createWalls("#FFFFFF")
+createGrid(10,10,10, "rgb(255,255,255)")
+createFrame("rgb(255, 255, 255)")
+activateControls()
+createLabels("Temperatura (C)", "Humedad (%)", "Tiempo (S)")
+var mappedInfoOutput =  loadInfo(originalInfo[2].info3, 3, "varX", "varY", "varZ", "rgb(212, 127, 30)", 50, "rgb(255,255,255)")
+addAxisSliders("#6666FF",true)
+enableLegend(14,"rgb(255,255,255)")
+```
 
 [npm]: https://img.shields.io/npm/v/three
 [npm-url]: https://www.npmjs.com/
